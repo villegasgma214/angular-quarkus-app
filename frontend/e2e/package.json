@@ -1,0 +1,22 @@
+{
+  "name": "my-angular-quarkus-app-e2e",
+  "version": "0.0.1",
+  "scripts": {
+    "ng": "ng",
+    "e2e": "ng e2e",
+    "lint": "ng lint",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "protractor": "^7.0.0",
+    "jasmine-core": "^3.5.0",
+    "jasmine-spec-reporter": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.5.0",
+    "@types/node": "^12.0.0",
+    "ts-node": "^8.0.0",
+    "typescript": "~4.0.0"
+  }
+}
