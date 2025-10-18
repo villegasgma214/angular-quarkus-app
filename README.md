@@ -5,7 +5,7 @@ This project is a full-stack application built with Angular for the frontend and
 ## Project Structure
 
 ```
-my-angular-quarkus-app
+angular-quarkus-app
 ├── frontend          # Angular frontend application
 │   ├── angular.json  # Angular workspace configuration
 │   ├── package.json   # NPM configuration for frontend

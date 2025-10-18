@@ -1,15 +1,17 @@
 # Stage 1: build the Angular app
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 WORKDIR /app
 
 # Install dependencies (uses package-lock if present)
 COPY package*.json ./
-RUN npm ci --legacy-peer-deps
+RUN npm install -g npm@11.6.2
+RUN npm install -D @angular/cli@20.3.6
+RUN npm i --force --legacy-peer-deps
 
 # Copy source and build
 COPY . .
 # Use local CLI if available, otherwise npx will install the proper version
-RUN npx @angular/cli@20 build --configuration production --output-path=dist --output-hashing=all
+RUN npx @angular/cli@20.3.6 build --configuration production --output-path=dist --output-hashing=all
 
 # Stage 2: serve with nginx
 FROM nginx:stable-alpine AS production

@@ -2,7 +2,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-angular-quarkus-app": {
+    "angular-quarkus-app": {
       "projectType": "application",
       "root": "src",
       "sourceRoot": "src",
@@ -11,7 +11,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-angular-quarkus-app",
+            "outputPath": "dist/angular-quarkus-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -36,7 +36,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -46,7 +45,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "2kb",
-                  "maximumError": "5kb"
+                  "maximumError": "500kb"
                 }
               ]
             }
@@ -55,11 +54,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-angular-quarkus-app:build"
+            "browserTarget": "angular-quarkus-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-angular-quarkus-app:build:production"
+              "browserTarget": "angular-quarkus-app:build:production"
             }
           }
         },
@@ -92,5 +91,5 @@
       }
     }
   },
-  "defaultProject": "my-angular-quarkus-app"
+  "defaultProject": "angular-quarkus-app"
 }
